@@ -1,6 +1,8 @@
 import { useState } from 'react'
 import './index.css'
 
+import {computePosition} from 'https://cdn.jsdelivr.net/npm/@floating-ui/dom@1.7.0/+esm';
+
 import EquipementSlot from './EquipmentSlot'
 
 function Grid() {
@@ -13,6 +15,9 @@ function Grid() {
         <div className="col-start-1 row-start-2 outline">
             <p className='absolute'>2</p>
             <EquipementSlot />
+            {/* <div>
+            <img className='absolute w-25' src="../public/LeeHeadphones_BGR.png" alt="" />
+            </div> */}
         </div>
         <div className="col-start-1 row-start-3 outline">
             <p className='absolute'>3</p>
