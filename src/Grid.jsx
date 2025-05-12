@@ -14,7 +14,7 @@ function Grid() {
         </div>
         <div className="col-start-1 row-start-2 outline">
             <p className='absolute'>2</p>
-            <EquipementSlot />
+            <EquipementSlot slot="Primary" />
             {/* <div>
             <img className='absolute w-25' src="../public/LeeHeadphones_BGR.png" alt="" />
             </div> */}
