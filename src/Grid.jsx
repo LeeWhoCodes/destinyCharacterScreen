@@ -60,6 +60,11 @@ function Grid() {
         </div>
         <div className="col-start-2 row-start-1 outline">
             <p className='absolute'>13</p>
+            <p className='text-6xl font-bold text-gray-400 opacity-50'>20</p>
+            <div className='flex flex-row'>
+                <img className='h-7' src="/LeeHeadphones_BGR.png" alt="" />
+                <p className='text-xl font-bold text-gray-400 opacity-50'>337</p>
+            </div>
         </div>
         <div className="row-span-4 col-start-4 row-start-1 outline">
             <p className='absolute'>14</p>
