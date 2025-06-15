@@ -8,7 +8,7 @@ import EquipementSlot from './EquipmentSlot'
 function Grid() {
 
   return (
-    <div className="grid grid-cols-5 grid-rows-6 gap-3 px-50 py-25 h-screen">
+    <div className="grid grid-cols-5 grid-rows-6 gap-3 px-50 py-25 h-9/10 bg-[#82A9B0]">
         <div className="outline">
             <p className='absolute'>1</p>
         </div>
@@ -60,10 +60,10 @@ function Grid() {
         </div>
         <div className="col-start-2 row-start-1 outline">
             <p className='absolute'>13</p>
-            <p className='text-8xl/15 font-bold text-gray-400 opacity-50'>20</p>
+            <p className='text-8xl/15 font-bold text-gray-200 opacity-50'>22</p>
             <div className='flex flex-row mt-3'>
                 <img className='h-7' src="/LeeHeadphones_BGR.png" alt="" />
-                <p className='text-xl font-bold text-gray-400 opacity-50'>337</p>
+                <p className='text-xl font-bold text-gray-200 opacity-50'>337</p>
             </div>
         </div>
         <div className="row-span-4 col-start-4 row-start-1 outline">
@@ -75,17 +75,17 @@ function Grid() {
                 </div>
                 <div className='flex flex-col items-center mt-5'>
                     <img className='h-7' src="/LeeHeadphones_BGR.png" alt="" />
-                    <p className='text-l font-bold text-gray-400'>78</p>
+                    <p className='text-l text-gray-300'>78</p>
                     <img className='' src="/statBar.PNG" alt="" />
                 </div>
                 <div className='flex flex-col items-center mt-5'>
                     <img className='h-7' src="/LeeHeadphones_BGR.png" alt="" />
-                    <p className='text-l font-bold text-gray-400'>78</p>
+                    <p className='text-l text-gray-300'>78</p>
                     <img className='' src="/statBar.PNG" alt="" />
                 </div>
                 <div className='flex flex-col items-center mt-5'>
                     <img className='h-7' src="/LeeHeadphones_BGR.png" alt="" />
-                    <p className='text-l font-bold text-gray-400'>78</p>
+                    <p className='text-l text-gray-300'>78</p>
                     <img className='' src="/statBar.PNG" alt="" />
                 </div>
             </div>
