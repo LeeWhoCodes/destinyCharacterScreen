@@ -8,10 +8,9 @@ import WeaponInfo from './WeaponInfo.jsx'
 
 createRoot(document.getElementById('root')).render(
   <StrictMode>
-    <div className='h-screen overflow-hidden'>
-      <Header />
-      <Grid />
-    </div>
-    <WeaponInfo />
+      <div className='h-screen overflow-hidden'>
+        <Header />
+        <Grid />
+      </div>
   </StrictMode>,
 )

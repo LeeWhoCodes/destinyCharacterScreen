@@ -2,6 +2,7 @@ import { useState } from 'react'
 import { useRef } from 'react'
 
 import InventoryGrid from './InventoryGrid';
+import WeaponInfo from './WeaponInfo';
 
 import {
     useFloating,
@@ -55,14 +56,8 @@ function EquipementSlot({slot}) {
             </div>        
           <img className='-translate-y-3' src="/LeeHeadphones_BGR.png" alt="" />
         </div>
-        <div className='outline bg-amber-400 h-100%' ref={infoRefs.setFloating} style={infoFloatingStyles} popover="manual">
-          <InventoryGrid />
-          <InventoryGrid />
-          <InventoryGrid />
-          <InventoryGrid />
-          <InventoryGrid />
-          <InventoryGrid />
-          <InventoryGrid />
+        <div className='outline w-1/5 bg-white/0 h-100% overflow-hidden' ref={infoRefs.setFloating} style={infoFloatingStyles} popover="manual">
+          <WeaponInfo />
         </div>
     </div>
   )
