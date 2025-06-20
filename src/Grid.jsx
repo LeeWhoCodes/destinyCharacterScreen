@@ -5,10 +5,12 @@ import {computePosition} from 'https://cdn.jsdelivr.net/npm/@floating-ui/dom@1.7
 
 import EquipementSlot from './EquipmentSlot'
 
+import InventorySlot from './InventorySlot';
+
 function Grid() {
 
   return (
-    <div className="grid grid-cols-5 grid-rows-6 gap-3 px-50 py-25 h-9/10 bg-[#82A9B0]">
+    <div className="grid grid-cols-5 grid-rows-6 gap-3 px-75 py-25 h-9/10 bg-[#82A9B0]">
         <div className="outline">
             <p className='absolute'>1</p>
         </div>
@@ -22,6 +24,7 @@ function Grid() {
         <div className="col-start-1 row-start-3 outline">
             <p className='absolute'>3</p>
             <EquipementSlot />
+            {/* <InventorySlot /> */}
         </div>
         <div className="col-start-1 row-start-4 outline">
             <p className='absolute'>4</p>
