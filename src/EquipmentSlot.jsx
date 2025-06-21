@@ -9,11 +9,27 @@ import {
     autoUpdate,
     offset,
     shift,
+    useClientPoint,
 } from '@floating-ui/react';
 
 import './index.css'
 
 function EquipementSlot({slot}) {
+
+    const virtualEl = {
+    getBoundingClientRect() {
+    return {
+      x: 2000,
+      y: 1000,
+      top: 10,
+      left: 100,
+      bottom: 20,
+      right: 20,
+      width: 20,
+      height: 20,
+    };
+  },
+};
 
   const {
     refs: invRefs,
@@ -26,6 +42,7 @@ function EquipementSlot({slot}) {
     const {
         refs: infoRefs,
         floatingStyles: infoFloatingStyles,
+        context: infoContext,
     } = useFloating ({
       placement: 'right',
       whileElementsMounted: autoUpdate,
@@ -35,18 +52,31 @@ function EquipementSlot({slot}) {
           padding: 5,
         }),
       ],
+      elements: {
+        reference: virtualEl,
+      },
     })
 
-  const {refs, floatingStyles} = useFloating({
-    placement: 'left-start',
-    whileElementsMounted: autoUpdate,
-  });
-
-  // const ref = useMergeRefs([invRefs.setReference, infoRefs.setReference]);
+    const {refs} = useFloating();
 
   return (
     <div className="border-2 border-yellow-400 bg-purple-600 size-1/2 m-auto h-full overflow-hidden" ref={invRefs.setReference} onMouseEnter={() => invRefs.floating.current.showPopover()} onMouseLeave={() => invRefs.floating.current.hidePopover()}>
-      <div ref={infoRefs.setReference} onMouseEnter={() => infoRefs.floating.current.showPopover()} onMouseLeave={() => infoRefs.floating.current.hidePopover()}>        
+      <div onClick={({clientX, clientY}) => {
+      infoRefs.setPositionReference({
+        getBoundingClientRect() {
+          return {
+            width: 0,
+            height: 0,
+            x: clientX,
+            y: clientY,
+            top: clientY,
+            left: clientX,
+            right: clientX,
+            bottom: clientY,
+          };
+        },
+      });
+    }} onMouseEnter={() => infoRefs.floating.current.showPopover()} onMouseLeave={() => infoRefs.floating.current.hidePopover()}>        
           <img className='-translate-y-3' src="/LeeHeadphones_BGR.png" alt="" />
       </div>
       <div className='outline w-1/5 bg-white/0 h-100% overflow-hidden' ref={infoRefs.setFloating} style={infoFloatingStyles} popover="manual">
