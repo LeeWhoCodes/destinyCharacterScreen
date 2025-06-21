@@ -14,6 +14,9 @@ function Grid() {
         <div className="outline">
             <p className='absolute'>1</p>
         </div>
+        <div className='col-start-2 col-span-3 row-start-1 row-span-6 outline'>
+            <img className='h-2/2 mx-auto' src="/public/Hunter_ironbanner_3.webp" alt="" />
+        </div>
         <div className="col-start-1 row-start-2 outline">
             <p className='absolute'>2</p>
             <EquipementSlot slot="Primary" />
