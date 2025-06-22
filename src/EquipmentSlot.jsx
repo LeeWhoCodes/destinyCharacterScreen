@@ -47,7 +47,7 @@ function EquipementSlot({slot}) {
       placement: 'right',
       whileElementsMounted: autoUpdate,
       middleware: [
-        offset(10),
+        offset(50),
         shift({
           padding: 5,
         }),
@@ -61,7 +61,7 @@ function EquipementSlot({slot}) {
 
   return (
     <div className="border-2 border-yellow-400 bg-purple-600 size-1/2 m-auto h-full overflow-hidden" ref={invRefs.setReference} onMouseEnter={() => invRefs.floating.current.showPopover()} onMouseLeave={() => invRefs.floating.current.hidePopover()}>
-      <div onClick={({clientX, clientY}) => {
+      <div onMouseMove={({clientX, clientY}) => {
       infoRefs.setPositionReference({
         getBoundingClientRect() {
           return {
