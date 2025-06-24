@@ -14,8 +14,9 @@ import {
 } from '@floating-ui/react';
 
 import './index.css'
+import InventoryGridRight from './InventoryGridRight';
 
-function EquipementSlot({slot}) {
+function EquipementSlotRight({slot}) {
 
     const virtualEl = {
     getBoundingClientRect() {
@@ -37,8 +38,13 @@ function EquipementSlot({slot}) {
     floatingStyles: invFloatingStyles,
     context: invContext,
     } = useFloating ({
-        placement: 'left-start',
+        placement: 'right-start',
         whileElementsMounted: autoUpdate,
+        middleware: [
+          shift({
+            padding: 5,
+          }),
+        ],
     });
 
     const {
@@ -46,7 +52,7 @@ function EquipementSlot({slot}) {
         floatingStyles: infoFloatingStyles,
         context: infoContext,
     } = useFloating ({
-      placement: 'right',
+      placement: 'left',
       whileElementsMounted: autoUpdate,
       middleware: [
         offset(50),
@@ -96,10 +102,10 @@ function EquipementSlot({slot}) {
 
       <div className=' bg-white/0' ref={invRefs.setFloating} style={invFloatingStyles} popover="manual">
         {/* <p>This is where the {slot} inventory would go</p> */}
-        <InventoryGrid />
+        <InventoryGridRight />
       </div>
     </div>
   )
 }
 
-export default EquipementSlot
+export default EquipementSlotRight

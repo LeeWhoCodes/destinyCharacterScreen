@@ -15,7 +15,7 @@ import {
 
 import './index.css'
 
-function EquipementSlot({slot}) {
+function ClassSlot({slot}) {
 
     const virtualEl = {
     getBoundingClientRect() {
@@ -71,7 +71,7 @@ function EquipementSlot({slot}) {
     });
 
   return (
-    <div className="border-2 border-yellow-400 bg-purple-600 w-9/10 overflow-hidden" ref={invRefs.setReference} onMouseEnter={() => invRefs.floating.current.showPopover()} onMouseLeave={() => invRefs.floating.current.hidePopover()}>
+    <div className="border-2 border-yellow-400 bg-purple-600 w-11/10 -translate-y-6 overflow-hidden" ref={invRefs.setReference} onMouseEnter={() => invRefs.floating.current.showPopover()} onMouseLeave={() => invRefs.floating.current.hidePopover()}>
       <div onMouseMove={({clientX, clientY}) => {
       infoRefs.setPositionReference({
         getBoundingClientRect() {
@@ -91,10 +91,10 @@ function EquipementSlot({slot}) {
           <img className='-translate-y-3' src="/LeeHeadphones_BGR.png" alt="" />
       </div>
       <div className=' w-1/5 bg-white/0 h-100% overflow-hidden' ref={infoRefs.setFloating} style={infoFloatingStyles} popover="manual">
-        <WeaponInfo />
+        {/* <WeaponInfo /> */}
       </div>
 
-      <div className=' bg-white/0' ref={invRefs.setFloating} style={invFloatingStyles} popover="manual">
+      <div className='' ref={invRefs.setFloating} style={invFloatingStyles} popover="manual">
         {/* <p>This is where the {slot} inventory would go</p> */}
         <InventoryGrid />
       </div>
@@ -102,4 +102,4 @@ function EquipementSlot({slot}) {
   )
 }
 
-export default EquipementSlot
+export default ClassSlot

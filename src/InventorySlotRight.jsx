@@ -14,7 +14,7 @@ import {
 
 import './index.css'
 
-function InventorySlot() {
+function InventorySlotRight() {
 
   const virtualEl = {
     getBoundingClientRect() {
@@ -43,10 +43,9 @@ function InventorySlot() {
         refs: infoRefs,
         floatingStyles: infoFloatingStyles,
     } = useFloating ({
-      placement: 'right',
+      placement: 'left',
       whileElementsMounted: autoUpdate,
       middleware: [
-        flip(),
         offset(50),
         shift({
           padding: 5,
@@ -91,4 +90,4 @@ function InventorySlot() {
   )
 }
 
-export default InventorySlot
+export default InventorySlotRight
