@@ -17,6 +17,19 @@ import './index.css'
 
 function EquipementSlot({slot}) {
 
+    const[invOpen, setInvOpen] = useState(false);
+
+    function handleMouseEnter() {
+      invRefs.floating.current.showPopover();
+      setInvOpen(true);
+      console.log(invOpen);
+    }
+
+    function handleMouseExit() {
+      invRefs.floating.current.hidePopover();
+      setInvOpen(false);
+    }
+
     const virtualEl = {
     getBoundingClientRect() {
     return {
@@ -71,7 +84,7 @@ function EquipementSlot({slot}) {
     });
 
   return (
-    <div className="border-2 border-yellow-400 bg-purple-600 w-9/10 overflow-hidden" ref={invRefs.setReference} onMouseEnter={() => invRefs.floating.current.showPopover()} onMouseLeave={() => invRefs.floating.current.hidePopover()}>
+    <div className="border-2 border-yellow-400 bg-purple-600 w-9/10 overflow-hidden" ref={invRefs.setReference} onMouseEnter={() => handleMouseEnter()} onMouseLeave={() => handleMouseExit()}>
       <div onMouseMove={({clientX, clientY}) => {
       infoRefs.setPositionReference({
         getBoundingClientRect() {
@@ -94,7 +107,7 @@ function EquipementSlot({slot}) {
         <WeaponInfo />
       </div>
 
-      <div className=' bg-white/0' ref={invRefs.setFloating} style={invFloatingStyles} popover="manual">
+      <div className={`starting:block overflow-hidden transition-[height,width,display] transition-discrete duration-150 ease-in-out bg-white/0 ${invOpen ? 'opacity-100 h-65 w-65 block' : 'h-0 w-0 hidden'}`} ref={invRefs.setFloating} style={invFloatingStyles} popover="manual">
         {/* <p>This is where the {slot} inventory would go</p> */}
         <InventoryGrid />
       </div>

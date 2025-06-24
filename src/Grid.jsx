@@ -12,7 +12,7 @@ import InventorySlot from './InventorySlot';
 function Grid() {
 
   return (
-    <div className="grid grid-cols-5 grid-rows-6 gap-3 px-75 py-25 h-9/10 bg-radial from-[#82A9B0] to-[#466461]">
+    <div className="grid grid-cols-5 grid-rows-6 gap-3 px-75 py-25 h-9/10 bg-radial from-[#82A9B0] to-[#324745]">
         <div className=" ml-35">
             {/* <p className='absolute'>1</p> */}
             <ClassSlot />
