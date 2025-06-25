@@ -1,5 +1,16 @@
 function Header() {
 
+function daysSinceFirstProject() {
+        const dateStart = new Date(2013, 2, 19);
+        const dateNow = new Date();
+
+        const millisecondsSince = dateNow.getTime() - dateStart.getTime();
+
+        const daysSince = Math.round(millisecondsSince / (1000 * 60 * 60 * 24));
+
+        return daysSince;
+    }
+
   return (
     <>
       <header className="w-screen bg-[#76837d] border-b-4 border-[#a7a7a7] flex h-1/10">
@@ -19,7 +30,7 @@ function Header() {
             <p className="text-white mt-1 text-3xl/5 text-center">22</p>
             <div className='flex flex-row items-center mt-0.5'>
               <img className='h-4 mt-0.5' src="/public/destinyPowerIconTransparent.png" alt="" />
-              <p className="text-[#F7E82C] text-center">4,466</p>
+              <p className="text-[#F7E82C] text-center">{daysSinceFirstProject().toLocaleString()}</p>
             </div>
           </div>
         </div>

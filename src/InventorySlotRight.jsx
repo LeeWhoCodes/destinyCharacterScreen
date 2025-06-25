@@ -81,7 +81,7 @@ function InventorySlotRight() {
         },
       });
     }} onMouseEnter={() => infoRefs.floating.current.showPopover()} onMouseLeave={() => infoRefs.floating.current.hidePopover()}>  
-          <img className='-translate-y-3' src="/LeeHeadphones_BGR.png" alt="" />
+          <img className='' src="/LeeHeadphones_BGR.png" alt="" />
         </div>
         <div className=' w-1/5 bg-white/0 h-100% overflow-hidden' ref={infoRefs.setFloating} style={infoFloatingStyles} popover="manual">
           <WeaponInfo />

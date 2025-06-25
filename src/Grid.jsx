@@ -11,6 +11,17 @@ import InventorySlot from './InventorySlot';
 
 function Grid() {
 
+    function daysSinceFirstProject() {
+        const dateStart = new Date(2013, 2, 19);
+        const dateNow = new Date();
+
+        const millisecondsSince = dateNow.getTime() - dateStart.getTime();
+
+        const daysSince = Math.round(millisecondsSince / (1000 * 60 * 60 * 24));
+
+        return daysSince;
+    }
+
   return (
     <div className="grid grid-cols-5 grid-rows-6 gap-3 px-75 py-25 h-9/10 bg-radial from-[#82A9B0] to-[#324745]">
         <div className=" ml-35">
@@ -80,7 +91,7 @@ function Grid() {
             <div className='flex flex-col items-center'>
                 <div className='flex flex-row items-center'>
                     <img className='h-9 mt-2' src="/public/destinyPowerIconTransparent.png" alt="" />
-                    <p className='text-5xl font-bold text-yellow-300'>4,466</p>
+                    <p className='text-5xl font-bold text-yellow-300'>{daysSinceFirstProject().toLocaleString()}</p>
                 </div>
                 <div className='flex flex-col items-center mt-5 w-full'>
                     <img className='h-9' src="/public/DestinyIntIconTransparent.png" alt="" />

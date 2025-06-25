@@ -4,6 +4,8 @@ import { useRef } from 'react'
 import InventoryGrid from './InventoryGrid';
 import WeaponInfo from './WeaponInfo';
 
+import ClassInventoryGrid from './ClassInventoryGrid';
+
 import {
     useFloating,
     autoUpdate,
@@ -16,6 +18,19 @@ import {
 import './index.css'
 
 function ClassSlot({slot}) {
+
+  const[invOpen, setInvOpen] = useState(false);
+
+  function handleMouseEnter() {
+      invRefs.floating.current.showPopover();
+      setInvOpen(true);
+      console.log(invOpen);
+    }
+
+    function handleMouseExit() {
+      invRefs.floating.current.hidePopover();
+      setInvOpen(false);
+    }
 
     const virtualEl = {
     getBoundingClientRect() {
@@ -71,7 +86,7 @@ function ClassSlot({slot}) {
     });
 
   return (
-    <div className="border-2 border-yellow-400 bg-purple-600 w-11/10 -translate-y-6 overflow-hidden" ref={invRefs.setReference} onMouseEnter={() => invRefs.floating.current.showPopover()} onMouseLeave={() => invRefs.floating.current.hidePopover()}>
+    <div className="border-2 border-yellow-400 bg-purple-600 w-11/10 -translate-y-6 overflow-hidden" ref={invRefs.setReference} onMouseEnter={() => handleMouseEnter()} onMouseLeave={() => handleMouseExit()}>
       <div onMouseMove={({clientX, clientY}) => {
       infoRefs.setPositionReference({
         getBoundingClientRect() {
@@ -88,15 +103,15 @@ function ClassSlot({slot}) {
         },
       });
     }} onMouseEnter={() => infoRefs.floating.current.showPopover()} onMouseLeave={() => infoRefs.floating.current.hidePopover()}>        
-          <img className='-translate-y-3' src="/LeeHeadphones_BGR.png" alt="" />
+          <img className='' src="/LeeHeadphones_BGR.png" alt="" />
       </div>
       <div className=' w-1/5 bg-white/0 h-100% overflow-hidden' ref={infoRefs.setFloating} style={infoFloatingStyles} popover="manual">
-        {/* <WeaponInfo /> */}
+        <WeaponInfo />
       </div>
 
-      <div className='' ref={invRefs.setFloating} style={invFloatingStyles} popover="manual">
+      <div className={`starting:block overflow-hidden transition-[height,width,display] transition-discrete duration-100 ease-in-out bg-white/0 ${invOpen ? 'opacity-100 h-25 w-80 block' : 'h-0 w-0 hidden'}`} ref={invRefs.setFloating} style={invFloatingStyles} popover="manual">
         {/* <p>This is where the {slot} inventory would go</p> */}
-        <InventoryGrid />
+        <ClassInventoryGrid />
       </div>
     </div>
   )

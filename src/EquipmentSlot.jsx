@@ -101,13 +101,13 @@ function EquipementSlot({slot}) {
         },
       });
     }} onMouseEnter={() => infoRefs.floating.current.showPopover()} onMouseLeave={() => infoRefs.floating.current.hidePopover()}>        
-          <img className='-translate-y-3' src="/LeeHeadphones_BGR.png" alt="" />
+          <img className='' src="/LeeHeadphones_BGR.png" alt="" />
       </div>
       <div className=' w-1/5 bg-white/0 h-100% overflow-hidden' ref={infoRefs.setFloating} style={infoFloatingStyles} popover="manual">
         <WeaponInfo />
       </div>
 
-      <div className={`starting:block overflow-hidden transition-[height,width,display] transition-discrete duration-150 ease-in-out bg-white/0 ${invOpen ? 'opacity-100 h-65 w-65 block' : 'h-0 w-0 hidden'}`} ref={invRefs.setFloating} style={invFloatingStyles} popover="manual">
+      <div className={`starting:block overflow-hidden transition-[height,width,display] transition-discrete duration-100 ease-in-out bg-white/0 ${invOpen ? 'opacity-100 h-65 w-65 block' : 'h-0 w-0 hidden'}`} ref={invRefs.setFloating} style={invFloatingStyles} popover="manual">
         {/* <p>This is where the {slot} inventory would go</p> */}
         <InventoryGrid />
       </div>
