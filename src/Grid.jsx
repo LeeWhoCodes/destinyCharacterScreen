@@ -23,58 +23,58 @@ function Grid() {
     }
 
   return (
-    <div className="grid grid-cols-5 grid-rows-6 gap-3 px-75 py-25 h-9/10 bg-radial from-[#82A9B0] to-[#324745]">
-        <div className=" ml-35">
+    <div className="grid grid-cols-5 grid-rows-6 gap-3 px-75 py-25 h-9/10 bg-radial from-[#82A9B0] to-[#324745] overflow-hidden">
+        <div className=" ml-35 min-w-28 max-w-28">
             {/* <p className='absolute'>1</p> */}
             <ClassSlot />
         </div>
         <div className='col-start-2 col-span-3 row-start-1 row-span-6 '>
             <img className='h-2/2 mx-auto' src="/public/Hunter_ironbanner_3.webp" alt="" />
         </div>
-        <div className="col-start-1 row-start-2 ml-35">
+        <div className="col-start-1 row-start-2 ml-35 min-w-25 max-w-25">
             {/* <p className='absolute'>2</p> */}
             <EquipementSlot slot="Primary" />
             {/* <div>
             <img className='absolute w-25' src="../public/LeeHeadphones_BGR.png" alt="" />
             </div> */}
         </div>
-        <div className="col-start-1 row-start-3  ml-35">
+        <div className="col-start-1 row-start-3 ml-35  min-w-25 max-w-25">
             {/* <p className='absolute'>3</p> */}
             <EquipementSlot />
             {/* <InventorySlot /> */}
         </div>
-        <div className="col-start-1 row-start-4  ml-35">
+        <div className="col-start-1 row-start-4  ml-35  min-w-25 max-w-25">
             {/* <p className='absolute'>4</p> */}
             <EquipementSlot />
         </div>
-        <div className="col-start-1 row-start-5  ml-35">
+        <div className="col-start-1 row-start-5  ml-35  min-w-25 max-w-25">
             {/* <p className='absolute'>5</p> */}
             <EquipementSlot />
         </div>
-        <div className="col-start-1 row-start-6  ml-35">
+        <div className="col-start-1 row-start-6  ml-35  min-w-25 max-w-25">
             {/* <p className='absolute'>6</p> */}
         </div>
-        <div className="col-start-5 row-start-1  mr-35">
+        <div className="col-start-5 row-start-1  mr-35  min-w-25 max-w-25">
             {/* <p className='absolute'>7</p> */}
             <EquipmentSlotRight />
         </div>
-        <div className="col-start-5 row-start-2  mr-35">
+        <div className="col-start-5 row-start-2  mr-35  min-w-25 max-w-25">
             {/* <p className='absolute'>8</p> */}
             <EquipmentSlotRight />
         </div>
-        <div className="col-start-5 row-start-3  mr-35">
+        <div className="col-start-5 row-start-3  mr-35  min-w-25 max-w-25">
             {/* <p className='absolute'>9</p> */}
             <EquipmentSlotRight />
         </div>
-        <div className="col-start-5 row-start-4  mr-35">
+        <div className="col-start-5 row-start-4  mr-35  min-w-25 max-w-25">
             {/* <p className='absolute'>10</p> */}
             <EquipmentSlotRight />
         </div>
-        <div className="col-start-5 row-start-5  mr-35">
+        <div className="col-start-5 row-start-5  mr-35  min-w-25 max-w-25">
             {/* <p className='absolute'>11</p> */}
             <EquipmentSlotRight />
         </div>
-        <div className="col-start-5 row-start-6  mr-35">
+        <div className="col-start-5 row-start-6  mr-35  min-w-25 max-w-25 overflow-hidden">
             {/* <p className='absolute'>12</p> */}
             <EquipmentSlotRight />
         </div>
