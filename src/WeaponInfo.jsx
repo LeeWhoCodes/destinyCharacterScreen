@@ -62,12 +62,12 @@ function WeaponInfo() {
                 <hr className="text-gray-500 mt-1" />
 
                 <div className="flex my-1">
-                    <img className='h-10 w-10 m-2' src="/public/DestinyStrengthIconTransparent.png" alt="" />
+                    <img className='h-10 w-10 m-2' src="/DestinyStrengthIconTransparent.png" alt="" />
                     <p className="ml-1">Kills with this weapon while critically wounded have a chance to start regenerating health.</p>
                 </div>
 
                 <div className="flex my-1">
-                    <img className='h-10 w-10 m-2' src="/public/DestinyDisciplineIconTransparent.png" alt="" />
+                    <img className='h-10 w-10 m-2' src="/DestinyDisciplineIconTransparent.png" alt="" />
                     <p className="ml-1">When stowed for a short time, this weapon is automatically reloaded from your reserves.</p>
                 </div>
             

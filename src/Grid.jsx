@@ -29,7 +29,7 @@ function Grid() {
             <ClassSlot />
         </div>
         <div className='col-start-2 col-span-3 row-start-1 row-span-6 '>
-            <img className='h-2/2 mx-auto' src="/public/Hunter_ironbanner_3.webp" alt="" />
+            <img className='h-2/2 mx-auto' src="/Hunter_ironbanner_3.webp" alt="" />
         </div>
         <div className="col-start-1 row-start-2 ml-35 min-w-25 max-w-25">
             {/* <p className='absolute'>2</p> */}
@@ -82,7 +82,7 @@ function Grid() {
             {/* <p className='absolute'>13</p> */}
             <p className='text-8xl/15 font-bold text-gray-200 opacity-50'>22</p>
             <div className='flex flex-row mt-3'>
-                <img className='h-7 opacity-50' src="/public/destinyGrimuoreLogoTransparent.png" alt="" />
+                <img className='h-7 opacity-50' src="/destinyGrimuoreLogoTransparent.png" alt="" />
                 <p className='text-xl font-bold text-gray-200 opacity-50'>337</p>
             </div>
         </div>
@@ -90,25 +90,25 @@ function Grid() {
             {/* <p className='absolute'>14</p> */}
             <div className='flex flex-col items-center'>
                 <div className='flex flex-row items-center'>
-                    <img className='h-9 mt-2' src="/public/destinyPowerIconTransparent.png" alt="" />
+                    <img className='h-9 mt-2' src="/destinyPowerIconTransparent.png" alt="" />
                     <p className='text-5xl font-bold text-yellow-300'>{daysSinceFirstProject().toLocaleString()}</p>
                 </div>
                 <div className='flex flex-col items-center mt-5 w-full'>
-                    <img className='h-9' src="/public/DestinyIntIconTransparent.png" alt="" />
+                    <img className='h-9' src="/DestinyIntIconTransparent.png" alt="" />
                     <p className='text-l text-gray-300'>300</p>
                     <div className="w-1/4 bg-gray-900/25 h-0.5">
                         <div className="bg-white h-0.5 w-100/100"></div>
                     </div>
                 </div>
                 <div className='flex flex-col items-center mt-5 w-full'>
-                    <img className='h-9' src="/public/DestinyDisciplineIconTransparent.png" alt="" />
+                    <img className='h-9' src="/DestinyDisciplineIconTransparent.png" alt="" />
                     <p className='text-l text-gray-300'>150</p>
                     <div className="w-1/4 bg-gray-900/25 h-0.5">
                         <div className="bg-white h-0.5 w-50/100"></div>
                     </div>
                 </div>
                 <div className='flex flex-col items-center mt-5 w-full'>
-                    <img className='h-9' src="/public/DestinyStrengthIconTransparent.png" alt="" />
+                    <img className='h-9' src="/DestinyStrengthIconTransparent.png" alt="" />
                     <p className='text-l text-gray-300'>75</p>
                     <div className="w-1/4 bg-gray-900/25 h-0.5">
                         <div className="bg-white h-0.5 w-25/100"></div>
