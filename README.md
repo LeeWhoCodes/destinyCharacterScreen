@@ -1,12 +1,36 @@
-# React + Vite
+# Destiny Character Screen Recreation
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+A recreation of the character screen from the game Destiny, created using React and Tailwind. The reasons I chose to create this project were.
+- To practice creating a page with a non-standard interface and layout.
+- To practice creating interactions similar to the ones found in the game.
 
-Currently, two official plugins are available:
+![DestinyScreenDemo](https://github.com/user-attachments/assets/e3e5b0ab-5774-43a6-a41b-a4005f408ded)
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+[Link to Demo](https://destiny-character-screen.vercel.app)
 
-## Expanding the ESLint configuration
+# Tech Stack
 
-If you are developing a production application, we recommend using TypeScript with type-aware lint rules enabled. Check out the [TS template](https://github.com/vitejs/vite/tree/main/packages/create-vite/template-react-ts) for information on how to integrate TypeScript and [`typescript-eslint`](https://typescript-eslint.io) in your project.
+- React  
+- Tailwind CSS  
+- Floating UI library 
+- Native Popover API 
+
+# Key Features
+
+- Created a page visually similar to the original game screen
+- Use of multiple popovers using different methods of positioning 
+- Transition and interactions to replicate the feel of the menu, not just the look
+
+# What I Learned
+
+- Gained a deeper understanding of CSS grid and how it works
+- How to create popovers using the popovers api
+  - And how to position those popovers using the floating UI library
+- Improved the speed at which I can take designs and recreate them into React components
+
+# Future Improvements
+
+- Improve layout and positioning for different screen sizes.
+- Add different items and the ability to swap them
+- Add other screens from the game
+- Add accessibility features
